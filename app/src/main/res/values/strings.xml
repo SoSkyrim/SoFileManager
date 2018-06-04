@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">搜桑的文件管理器</string>
+
+    <string name="tmp_str">占位符</string>
+
+    <string name="dock_deal">处理</string>
+    <string name="dock_note">记事</string>
+    <string name="dock_media">媒体</string>
+    <string name="dock_setting">设置</string>
+
+
+    <string name="file_system_back">返回</string>
+    <string name="file_system_dir">文件夹</string>
+
+    <string name="bt_confirm">确认</string>
+    <string name="bt_cancel">取消</string>
+    <string name="bt_backup">备份</string>
+    <string name="input_code_hint">使用默认密钥或者手输</string>
+    <string name="use_default">使用默认密钥</string>
+    <string name="title_hint">请输入标题</string>
+    <string name="bt_complete">完成输入</string>
+    <string name="bt_select_pic">添加图片</string>
+    <string name="rich_content">请输入内容</string>
+    <string name="lock">锁</string>
+    <string name="note_text">文本模式</string>
+    <string name="note_pic">带图模式</string>
+    <string name="old_txt">原有文件</string>
+    <string name="new_txt">新建文件</string>
+    <string name="save_cancel">不保存</string>
+    <string name="note_save">保存</string>
+    <string name="use_key">使用</string>
+    <string name="no_use">不使用</string>
+
+    <!-- 正式字符串 -->
+    <!-- 按钮文本 -->
+    <string name="begin_deal">开始处理</string>
+    <string name="begin_note">开始记事</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="ret">返回</string>
+    <string name="unlock">解锁</string>
+    <string name="backup">备份</string>
+    <!-- 提示文本 -->
+    <string name="select_note_type">请选择记事类型:</string>
+    <string name="select_note_con">是新建还是继续?</string>
+    <string name="new_txt_name">为你的新文本起个好听名字:</string>
+    <string name="new_out_name">为你的输出文件起个好听名字:</string>
+    <string name="select_old_txt">请选择之前保存的文本记事文件!</string>
+    <string name="select_old_pic">请选择之前保存的带图记事文件!</string>
+    <string name="select_video">请选择你要播放的视频文件!</string>
+    <string name="save_txt">是否保存文件?</string>
+    <string name="use_key_save">是否使用密钥存储?</string>
+    <string name="use_key_read">是否使用密钥读取?</string>
+    <string name="use_key_type">请选择密钥类型?</string>
+    <string name="use_key_write">手动输入密钥</string>
+    <string name="use_last_key">上次密钥</string>
+    <string name="use_default_key">默认密钥</string>
+    <string name="use_write_key">使用手输密钥</string>
+    <string name="input_code">请输入解密密码:</string>
+    <string name="com_file_select">是否完成文件选择?</string>
+    <string name="com_pic_select">是否完成图片选择?</string>
+    <string name="com_music_select">是否完成音乐选择?</string>
+    <string name="com_file_again">请您再次确认选择的文件!</string>
+    <string name="delete_file">是否删除文件?</string>
+    <string name="delete_file_msg">文件处理完毕, 因内含密码, 强烈建议您用笔记到多处, 并删除!</string>
+    <string name="dealing_files">正在处理您的文件...</string>
+    <string name="confirm_ret_info">请确认解析信息!</string>
+    <string name="confirm_deal_info">请确认提取信息!</string>
+    <string name="confirm_select_video">请确认你选择的文件!</string>
+    <string name="create_out_file">请创建你的输出文件!</string>
+    <string name="select_in_file">请选择你的输入文件!</string>
+    <string name="select_out_file">请选择你要查看的输出文件!</string>
+    <string name="select_install_file">请选择要安装的文件!</string>
+    <string name="click_again_exit">再按一次退出!</string>
+    <string name="play_music">欣赏音乐</string>
+    <string name="now_playing">正在播放: %1$s</string>
+    <string name="read_music_error">文件读取出错, 请尝试其他歌曲!</string>
+    <string name="read_video_error">视频加载出错, 请确认资源和密钥!</string>
+    <string name="str_empty">输入为空!</string>
+    <string name="confirm_out_file">确认要查看的文件</string>
+    <string name="confirm_install_file">确认要安装的文件</string>
+    <string name="confirm_ret">确认返回信息!</string>
+    <string name="no_key">不使用</string>
+
+    <!-- 正式字符串数组-->
+    <!-- 记事类型 -->
+    <string-array name="note_type">
+        <item>文本记事</item>
+        <item>带图记事</item>
+    </string-array>
+    <!-- 是否新建 -->
+    <string-array name="note_txt_con">
+        <item>新建文本记事</item>
+        <item>读取文本记事</item>
+    </string-array>
+    <string-array name="note_pic_con">
+        <item>新建带图记事</item>
+        <item>读取带图记事</item>
+    </string-array>
+    <!-- 是否保存 -->
+    <string-array name="save_txt_confirm">
+        <item>不保存</item>
+        <item>保存</item>
+    </string-array>
+    <!-- 是否保存 -->
+    <string-array name="use_key_save">
+        <item>不使用</item>
+        <item>使用</item>
+    </string-array>
+    <!-- 存储结果 -->
+    <string-array name="save_result">
+        <item>存储失败</item>
+        <item>存储成功</item>
+    </string-array>
+    <!-- 选择完成 -->
+    <string-array name="select_confirm">
+        <item>否</item>
+        <item>是</item>
+    </string-array>
+
+    <!-- 是否删除 -->
+    <string-array name="delete_confirm">
+        <item>保留</item>
+        <item>删除</item>
+    </string-array>
+
+    <!-- 处理页面按钮 -->
+    <string-array name="deal_pager">
+        <item>开始处理</item>
+    </string-array>
+
+    <!-- 记事页面按钮 -->
+    <string-array name="note_pager">
+        <item>开始记事</item>
+    </string-array>
+
+    <!-- 媒体页面按钮 -->
+    <string-array name="media_pager">
+        <item>浏览图片</item>
+        <item>欣赏音乐</item>
+        <item>观看视频</item>
+    </string-array>
+
+    <!-- 设置页面按钮 -->
+    <string-array name="setting_pager">
+        <item>申请</item>
+        <item>查看</item>
+        <item>安装</item>
+    </string-array>
+    <string name="title_activity_fm">FMActivity</string>
+    <string name="all">全选</string>
+    <string name="clear">清空</string>
+
+
+    <string name="selected_str">已选: %1$d</string>
+    <string name="con_file_selected">请确认所选文件</string>
+    <string name="no">否</string>
+    <string name="yes">是</string>
+    <string name="select_empty">未选择文件,请确认!</string>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_file_image"
+        android:layout_width="@dimen/forty_eight_dp"
+        android:layout_height="@dimen/forty_eight_dp"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/four_dp"
+        android:src="@drawable/file" />
+
+    <LinearLayout
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/twelve_dp">
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/four_dp"
+            android:paddingTop="@dimen/four_dp"
+            android:text="@string/tmp_str"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/sixteen_sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/four_dp">
+
+            <TextView
+                android:id="@+id/tv_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tmp_str"
+                android:textSize="@dimen/twelve_sp" />
+
+            <TextView
+                android:id="@+id/tv_file_time"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:text="@string/tmp_str"
+                android:textSize="@dimen/twelve_sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

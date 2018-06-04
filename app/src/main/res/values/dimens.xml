@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="four_dp">4dp</dimen>
+    <dimen name="eight_dp">8dp</dimen>
+    <dimen name="twelve_dp">12dp</dimen>
+    <dimen name="sixteen_dp">16dp</dimen>
+    <dimen name="thirty_two_dp">32dp</dimen>
+    <dimen name="forty_eight_dp">48dp</dimen>
+    <dimen name="sixty_dp">60dp</dimen>
+
+    <dimen name="sixteen_sp">16sp</dimen>
+    <dimen name="twenty_sp">20sp</dimen>
+    <dimen name="twelve_sp">12sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
