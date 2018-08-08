@@ -63,7 +63,7 @@
     <string name="com_file_again">请您再次确认选择的文件!</string>
     <string name="delete_file">是否删除文件?</string>
     <string name="delete_file_msg">文件处理完毕, 因内含密码, 强烈建议您用笔记到多处, 并删除!</string>
-    <string name="dealing_files">正在处理您的文件...</string>
+    <string name="dealing_files">正在处理您的文件</string>
     <string name="confirm_ret_info">请确认解析信息!</string>
     <string name="confirm_deal_info">请确认提取信息!</string>
     <string name="confirm_select_video">请确认你选择的文件!</string>
@@ -157,5 +157,7 @@
     <string name="no">否</string>
     <string name="yes">是</string>
     <string name="select_empty">未选择文件,请确认!</string>
+    <string name="succeed">成功获取权限!</string>
+    <string name="failed">拒绝权限, 将无法使用程序.</string>
 
 </resources>

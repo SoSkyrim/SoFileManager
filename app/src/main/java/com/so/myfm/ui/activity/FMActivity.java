@@ -26,6 +26,7 @@ import com.so.myfm.utils.PermissionsUtil;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Stack;
 
 public class FMActivity extends AppCompatActivity {
@@ -97,14 +98,9 @@ public class FMActivity extends AppCompatActivity {
 
         mCurPathStack = new Stack<>();
 
-        mCurFileList = new ArrayList<>();
-
         File[] files = Environment.getExternalStorageDirectory().listFiles();
-        if (files != null) {
-            for (File f : files) {
-                mCurFileList.add(f);
-            }
-        }
+
+        mCurFileList = new ArrayList<>(Arrays.asList(files));
 
         mCurPathStack.push(mSdcardPath);
         mTvPath.setText(getCurPath());
@@ -125,10 +121,11 @@ public class FMActivity extends AppCompatActivity {
                 } else {
                     // 是文件
                     mSelectCount = mFMAdapter.refreshSelect(position);
-                    getSupportActionBar()
-                            .setTitle(String.format(getResources()
-                                    .getString(R.string.selected_str), mSelectCount));
-
+                    if (getSupportActionBar() != null) {
+                        getSupportActionBar()
+                                .setTitle(String.format(getResources()
+                                        .getString(R.string.selected_str), mSelectCount));
+                    }
                     // 将选中的文件加入文件路径数组
                     if (!mSelectPath.contains(file.getAbsolutePath())) {
                         mSelectPath.add(file.getAbsolutePath());
@@ -166,10 +163,9 @@ public class FMActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setTitle(String.format(getResources().getString(
+                    R.string.selected_str), mSelectCount));
         }
-
-        actionBar.setTitle(String.format(getResources().getString(
-                R.string.selected_str), mSelectCount));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -251,17 +247,22 @@ public class FMActivity extends AppCompatActivity {
                         }
                     }
                     mFMAdapter.refreshSelect(-2);
-                    getSupportActionBar().setTitle(
-                            String.format(getResources().getString(
-                                    R.string.selected_str), mSelectCount));
+                    if (getSupportActionBar() != null) {
+                        getSupportActionBar().setTitle(
+                                String.format(getResources().getString(
+                                        R.string.selected_str), mSelectCount));
+                    }
                     mAll++;
                 } else {
                     mSelectPath.clear();
                     mSelectCount = 0;
                     mFMAdapter.refreshSelect(-1);
-                    getSupportActionBar().setTitle(
-                            String.format(getResources().getString(
-                                    R.string.selected_str), mSelectCount));
+
+                    if (getSupportActionBar() != null) {
+                        getSupportActionBar().setTitle(
+                                String.format(getResources().getString(
+                                        R.string.selected_str), mSelectCount));
+                    }
                     mAll++;
                 }
                 break;
@@ -279,9 +280,8 @@ public class FMActivity extends AppCompatActivity {
         mCurFileList.clear();
 
         File[] files = new File(path).listFiles();
-        for (File f : files) {
-            mCurFileList.add(f);
-        }
+
+        mCurFileList = new ArrayList<>(Arrays.asList(files));
 
         mFMAdapter.refreshData(mCurFileList);
     }
@@ -310,13 +310,10 @@ public class FMActivity extends AppCompatActivity {
         switch (requestCode) {
             case 1:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    LogUtil.i("成功获取权限");
-                    // 隐藏虚拟按键栏
-//                    new NavigationBarUtil(this).detectNavigationBar();
+                    LogUtil.i(getResources().getString(R.string.succeed));
                 } else {
-                    Toast.makeText(this, "拒绝权限, 将无法使用程序.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getResources().getString(R.string.failed), Toast.LENGTH_LONG).show();
                     finish();
-                    // TODO: 24/04/2018 帮助用户打开
                 }
                 break;
             default:

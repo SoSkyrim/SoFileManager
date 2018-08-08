@@ -9,7 +9,6 @@ import android.support.v4.app.ActivityCompat;
  * 权限获取util
  * Created by so on 2017/12/30.
  */
-
 public class PermissionsUtil {
     // 读写权限
     private static final int REQUEST_EXTERNAL_STORAGE = 1;

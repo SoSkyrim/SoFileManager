@@ -16,9 +16,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 /**
- *
+ * FM适配器
  * Created by sorrower on 21/04/2018.
  */
 
@@ -39,7 +40,7 @@ public class FMAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final LayoutInflater mLayoutInflater;
 
-    public enum ITEM_TYPE {
+    private enum ITEM_TYPE {
         ITEM_TYPE_IMAGE,
         ITEM_TYPE_TEXT
     }
@@ -77,7 +78,7 @@ public class FMAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         ((MyIVHolder) holder).fileName.setText(file.getName());
 
-        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
         ((MyIVHolder) holder).fileTime.setText(format.format(new Date(file.lastModified())));
 
         if (mOnItemClickListener != null) {
@@ -113,7 +114,7 @@ public class FMAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return mFiles == null ? 0 : mFiles.size();
     }
 
-    public static class MyIVHolder extends RecyclerView.ViewHolder {
+    private static class MyIVHolder extends RecyclerView.ViewHolder {
         ImageView fileImage;
         TextView fileName;
         TextView fileSize;
@@ -141,15 +142,15 @@ public class FMAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             } else if (pos == -2) {
                 // 全选
                 for (int i = 0; i < mFiles.size(); i++) {
-                    if (mFiles.get(i).isFile() && !mSelectList.contains((Integer) i)) {
-                        mSelectList.add((Integer) i);
+                    if (mFiles.get(i).isFile() && !mSelectList.contains(i)) {
+                        mSelectList.add(i);
                     }
                 }
             }
         } else {
             // 单选
-            if (!mSelectList.contains((Integer) pos)) {
-                mSelectList.add((Integer) pos);
+            if (!mSelectList.contains(pos)) {
+                mSelectList.add(pos);
             } else {
                 mSelectList.remove((Integer) pos);
             }

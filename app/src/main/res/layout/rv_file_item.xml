@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -10,14 +11,17 @@
         android:layout_height="@dimen/forty_eight_dp"
         android:layout_gravity="center_vertical"
         android:padding="@dimen/four_dp"
-        android:src="@drawable/file" />
+        android:src="@drawable/file"
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
 
     <LinearLayout
-        android:layout_width="@dimen/zero_dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/twelve_dp">
+        android:paddingStart="@dimen/twelve_dp"
+        tools:ignore="RtlSymmetry">
 
         <TextView
             android:id="@+id/tv_file_name"
@@ -32,10 +36,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/zero_dp"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/four_dp">
+            android:paddingBottom="@dimen/four_dp"
+            tools:ignore="NestedWeights">
 
             <TextView
                 android:id="@+id/tv_file_size"
@@ -46,9 +51,9 @@
 
             <TextView
                 android:id="@+id/tv_file_time"
-                android:layout_width="@dimen/zero_dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="@dimen/eight_dp"
                 android:layout_weight="1"
                 android:text="@string/tmp_str"
                 android:textSize="@dimen/twelve_sp" />
